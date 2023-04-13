@@ -17,6 +17,7 @@ describe('Primeiro teste', () => {
         await driver.execute('mobile: scroll', { direction: 'down', strategy: 'accessibility id', selector: '~button-Active' });
 
         await $('~button-Active').click()
+        expect (await $('android.widget.Button')).toBeDisplayed()
+        
     });
 });
-
